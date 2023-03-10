@@ -1,0 +1,9 @@
+<app-project-card 
+*ngFor="let project of projects"
+[projectName]="project.projectName"
+[projectDescription]="project.projectDescription"
+[projectRepo]="project.projectRepo"
+[projectDemo]="project.projectDemo"
+[projectImage]="project.projectImage"
+[npmPackage]="project.npmPackage"
+></app-project-card>
