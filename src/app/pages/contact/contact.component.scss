@@ -1,11 +1,47 @@
-.container {
+.email-form-container {
     font-family: 'IBM Plex Mono';
+
+    strong {
+        font-family: 'IBM Plex Mono Bold'
+    }
+
+    label {
+        margin: 1rem 1rem;
+    }
+
+    textarea {
+        display: block;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        width: 20rem;
+        height: 10rem;
+    }
+
+    button {
+        margin: 0 1rem;
+    }
+
+    .error-input {
+        border: 2px solid #FF0000;
+    }
+
+    .submission-container {
+        margin-left: 1rem;
+        > div {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .error-container {
+        width: 75%;
+        margin-left: 1rem;
+        > div, p {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
 }
 
-strong {
-    font-family: 'IBM Plex Mono Bold'
-}
 
-.error-input {
-    border: 2px solid #FF0000;
-}
+

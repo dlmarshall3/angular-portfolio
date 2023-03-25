@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,12 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @ViewChild('navbarToggler') navbarToggler!: ElementRef;
+
   public resume = 'assets/DavidMarshallResume.pdf';
   
-  constructor() {
-
+  constructor(private router: Router) {
+    this.router.events.subscribe((val) => {
+      if(val instanceof NavigationEnd){
+        setTimeout(() => {
+          let toggler = document.getElementById('navbarNavAltMarkup');
+          toggler?.classList.remove('show');
+        }, 200)
+      }
+    })
   }
 
   ngOnInit(): void {
+    
   }
 }

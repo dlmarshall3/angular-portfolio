@@ -1,6 +1,6 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { EmailService } from 'src/app/services/email.service';
 
 @Component({
   selector: 'app-contact',
@@ -9,13 +9,16 @@ import { EmailService } from 'src/app/services/email.service';
 })
 export class ContactComponent implements OnInit {
   public displayErrors = false;
+  public emailSentSuccessfully = false;
+  public emailSentUnsuccessfully = false;
+  public emailSubmissionCheck = false;
   public emailForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    comments: new FormControl('', [Validators.required])
+    message: new FormControl('', [Validators.required])
   });
 
-  constructor(private emailService: EmailService) { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
@@ -25,13 +28,26 @@ export class ContactComponent implements OnInit {
       this.displayErrors = true;
       return;
     } else {
-      this.emailService.sendEmail(this.emailForm.value).subscribe(response => {
-        return response;
-      }, error => {
-        console.log(error);
-      })
+      this.emailSubmissionCheck = true;
+      const headers = new HttpHeaders({'Content-Type': 'application/json'});
+      this.http.post('https://formspree.io/f/mdovlbbj',
+      {name: this.emailForm.controls.name.value, replyto: this.emailForm.controls.email.value, message: this.emailForm.controls.message.value}, {headers: headers}).subscribe( response => {
+        if(response){
+          this.emailSubmissionCheck = false;
+          this.emailSentSuccessfully = true;
+          this.resetForm();
+          this.displayErrors = false;
+        } else {
+          this.emailSubmissionCheck = false;
+          this.emailSentUnsuccessfully = true;
+        }
+      });
     }
   }
 
-
+  private resetForm(){
+    this.emailForm.patchValue({name: ''});
+    this.emailForm.patchValue({email: ''});
+    this.emailForm.patchValue({message: ''});
+  }
 }
