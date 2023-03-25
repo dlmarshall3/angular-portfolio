@@ -11,14 +11,12 @@ export class AboutMeComponent implements OnInit {
     Frontend: 'JavaScript, Angular, Vue.js, CSS3, HTML5, AJAX, jQuery',
     Backend: 'C#, Node.js, Express',
     Database: 'PostgreSQL, Knex',
-    Misc: 'Azure, SonarQube, LaunchDarkly, Adobe Analytics'
+    Other: 'Azure, SonarQube, LaunchDarkly, Adobe Analytics, Jasmine, Karma'
   }
 
   public onCompare(_left: KeyValue<any, any>, _right: KeyValue<any, any>): number {
     return 1;
   }
-
-  constructor() { }
 
   ngOnInit(): void {
   }

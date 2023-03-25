@@ -1,4 +1,10 @@
 .about-me- {
+    &container {
+        font-family: 'IBM Plex Mono';
+        strong {
+            font-family: 'IBM Plex Mono Bold';
+        }
+    }
     &image-container {
         img {
             width: 20rem;

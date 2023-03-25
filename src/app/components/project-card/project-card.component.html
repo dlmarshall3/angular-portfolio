@@ -3,8 +3,10 @@
     <div class="card-body">
       <h5 class="card-title">{{projectName}}</h5>
       <p class="card-text">{{projectDescription}}</p>
-      <a [href]="projectRepo" class="btn btn-primary">Repo</a>
-      <a [href]="projectDemo" class="btn btn-primary">Demo</a>
-      <a [href]="npmPackage" class="btn btn-primary" *ngIf="npmPackage">NPM Package</a>
+      <div class="button-container">
+        <a [href]="projectRepo" class="btn btn-primary">Repo</a>
+        <a [href]="projectDemo" class="btn btn-primary">Demo</a>
+        <a [href]="npmPackage" class="btn btn-primary" *ngIf="npmPackage">NPM Package</a>
+      </div>
     </div>
 </div>
