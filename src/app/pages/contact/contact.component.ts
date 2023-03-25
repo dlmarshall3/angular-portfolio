@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { EmailService } from 'src/app/services/email.service';
 
 @Component({
@@ -26,7 +26,7 @@ export class ContactComponent implements OnInit {
       return;
     } else {
       this.emailService.sendEmail(this.emailForm.value).subscribe(response => {
-        console.log(response);
+        return response;
       }, error => {
         console.log(error);
       })
