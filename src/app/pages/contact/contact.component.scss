@@ -15,6 +15,9 @@
         margin-bottom: 1rem;
         width: 20rem;
         height: 10rem;
+        @media screen and (max-width: 425px){
+            width: 65%;
+        }
     }
 
     button {
