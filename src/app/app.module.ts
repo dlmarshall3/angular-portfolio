@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,7 +10,6 @@ import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
-import { Lightbox, LightboxModule } from 'ngx-lightbox';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { Lightbox, LightboxModule } from 'ngx-lightbox';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LightboxModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

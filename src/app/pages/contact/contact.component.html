@@ -1,1 +1,34 @@
-<p>contact works!</p>
+<div class="container">
+    <form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+        <div class="name-container">
+            <label for="name"><strong>Name: </strong></label>
+            <input type="text" [formControl]="emailForm.controls.name" [ngClass]="{'error-input' : emailForm.controls.name.errors && displayErrors}">
+        </div>
+        <div class="email-address-container">
+            <label for="name"><strong>Email: </strong></label>
+            <input type="text" [formControl]="emailForm.controls.email" [ngClass]="{'error-input' : emailForm.controls.email.errors && displayErrors}">
+        </div>
+        <div class="comments-container">
+            <label for="name"><strong>Comments: </strong></label>
+            <textarea [formControl]="emailForm.controls.comments" [ngClass]="{'error-input' : emailForm.controls.comments.errors && displayErrors}"></textarea>
+        </div>
+        <div class="button-container">
+            <button class="btn btn-primary">Submit</button>
+        </div>
+        <ng-container *ngIf="displayErrors">
+            <strong>Please address the following errors:</strong>
+            <div *ngIf="emailForm.controls.name.errors">
+                I have no way to reply to your email without a name!
+            </div>
+            <div *ngIf="emailForm.controls.email.errors">
+                Same with your email address. I'd like to reply - unless you're a spam artist.
+            </div>
+            <div *ngIf="emailForm.controls.email.errors?.['email']">
+                My form doesn't like your email address format. It's nothing personal, I promise.
+            </div>
+            <div *ngIf="emailForm.controls.comments.errors">
+                A blank message, eh, Steve?
+            </div>
+        </ng-container>
+    </form>
+</div>
