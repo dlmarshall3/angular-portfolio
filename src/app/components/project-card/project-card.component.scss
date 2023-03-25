@@ -10,3 +10,20 @@ strong {
     display: flex;
     justify-content: space-evenly;
 }
+
+@media screen and (min-width: 760px){
+    .card-image-container {
+        width: 40%;
+        img {
+            margin-top: 2rem;
+        }
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: flex-start;
+        a {
+            margin-right: 2rem;
+        }
+    }
+}

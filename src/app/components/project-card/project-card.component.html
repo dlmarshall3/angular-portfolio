@@ -1,12 +1,14 @@
 <div class="card">
-    <img [src]="projectImage" class="card-img-top">
+    <div class="card-image-container">
+      <img [src]="projectImage" class="card-img-top">
+    </div>
     <div class="card-body">
       <h5 class="card-title"><strong>{{projectName}}</strong></h5>
       <p class="card-text">{{projectDescription}}</p>
       <div class="button-container">
-        <a [href]="projectRepo" class="btn btn-primary">Repo</a>
-        <a [href]="projectDemo" class="btn btn-primary">Demo</a>
-        <a [href]="npmPackage" class="btn btn-primary" *ngIf="npmPackage">NPM Package</a>
+        <a [href]="projectRepo" target="_blank" class="btn btn-primary">Repo</a>
+        <a [href]="projectDemo" target="_blank" class="btn btn-primary">Demo</a>
+        <a [href]="npmPackage" target="_blank" class="btn btn-primary" *ngIf="npmPackage">NPM Package</a>
       </div>
     </div>
 </div>
