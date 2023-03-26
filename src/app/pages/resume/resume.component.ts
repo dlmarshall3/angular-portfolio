@@ -5,6 +5,7 @@ import { Jobs } from './jobs';
 import { Technologies } from '../../shared/technologies';
 import { Education } from './education';
 
+
 @Component({
   selector: 'app-resume',
   templateUrl: './resume.component.html',
@@ -14,8 +15,6 @@ export class ResumeComponent implements OnInit {
   public jobExperience = Jobs;
   public technologies = Technologies;
   public education = Education;
-
-  constructor() { }
 
   ngOnInit(): void {
   }
