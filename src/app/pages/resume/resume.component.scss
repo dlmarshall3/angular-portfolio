@@ -1,0 +1,32 @@
+.resume-container {
+    font-family: 'IBM Plex Mono';
+        strong {
+            font-family: 'IBM Plex Mono Bold';
+        }
+    margin: 1rem 1rem 1rem 1rem;
+    h1 {
+        margin-bottom: 1rem;
+    }
+
+    .experience-container {
+        margin-bottom: 1rem;
+        .accordion {
+            
+        }
+
+        @media screen and (min-width: 770px) {
+            .accordion {
+                width: 50%;
+            }
+        }
+    }
+
+    .technologies-container, .education-container {
+        ul {
+            padding-left: 0;
+        }
+        li {
+            list-style-type: none;
+        }
+    }
+}
