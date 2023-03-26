@@ -1,7 +1,7 @@
 export const Projects =[
     {
         projectName: 'Portfolio Website',
-        projectDescription: `When I design an application, my goal is to create what is necessary, and nothing more. I'm a huge fan of minimalist design, so with this portfolio site, I wanted to emphasize a user-friendly experience rather than animations galore. Even the generic buttons are intentional. (I personally love the combination of a gray background, square corners and IBM font.)`,
+        projectDescription: `When I design an application, my goal is to create what is necessary, and nothing more. I'm a huge fan of minimalist design, so with this portfolio site, the last thing I wanted to do was sacrifice user-experience or the ability to quickly access information for the sake of flashy animations and the like. Even the generic buttons are intentional. (I personally love the combination of a gray background, square corners and IBM font.)`,
         projectRepo: 'https://github.com/dlmarshall3/angular-portfolio',
         projectDemo: 'https://davidmarshall.dev/',
         projectImage: 'assets/portfolio.png',
