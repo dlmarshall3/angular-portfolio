@@ -1,29 +1,41 @@
 .card {
     font-family: 'IBM Plex Mono';
-}
+    border: 0;
 
-strong {
-    font-family: 'IBM Plex Mono Bold';
-}
-
-.button-container {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-@media screen and (min-width: 760px){
-    .card-image-container {
-        width: 40%;
-        img {
-            margin-top: 2rem;
-        }
+    strong {
+        font-family: 'IBM Plex Mono Bold';
     }
 
     .button-container {
         display: flex;
-        justify-content: flex-start;
-        a {
-            margin-right: 2rem;
+        justify-content: space-evenly;
+    }
+
+    img {
+        margin-left: 1rem;
+        border-radius: 1%;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 26%);
+    }
+
+    img:hover {
+        box-shadow: none
+    }
+
+    @media screen and (min-width: 760px){
+        .card-image-container {
+            width: 40%;
+            img {
+                margin-top: 2rem;
+            }
+        }
+    
+        .button-container {
+            display: flex;
+            justify-content: flex-start;
+            a {
+                margin-right: 2rem;
+            }
         }
     }
 }
+

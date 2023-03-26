@@ -13,7 +13,7 @@
             <textarea [formControl]="emailForm.controls.message" [ngClass]="{'error-input' : emailForm.controls.message.errors && displayErrors}"></textarea>
         </div>
         <div class="button-container">
-            <button class="btn btn-primary" [disabled]="emailSubmissionCheck">Submit</button>
+            <button [disabled]="emailSubmissionCheck">Submit</button>
         </div>
         <div *ngIf="displayErrors">
             <div class="error-container">
