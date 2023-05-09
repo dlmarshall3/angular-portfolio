@@ -1,5 +1,15 @@
 export const Jobs = [
     { 
+        name: 'Freelance / Self-employed',
+        role: 'Software Developer',
+        location: 'Kansas City, MO',
+        time: 'April 2023 - Present',
+        experience: [
+            "After securing a contract with a private firm, developed an internal application for a globally recognized client using Next.js and MongoDB, which effectively displayed OpenAI-generated results to enhance their marketing and sales efforts.",
+            "Suggested and implemented design decisions and integrated third-party tools such as Auth0 and Algolia InstantSearch to enhance said application's functionality and overall user experience."
+        ]
+    },
+    { 
         name: 'H&R Block',
         role: 'Associate Software Engineer',
         location: 'Kansas City, MO',

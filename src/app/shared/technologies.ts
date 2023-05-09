@@ -1,6 +1,6 @@
 export const Technologies = {
-    Frontend: 'JavaScript, Angular, Vue.js, CSS3, HTML5, AJAX, jQuery',
+    Frontend: 'Angular, TypeScript, Vue, CSS, SCSS, JavaScript, React, Next.js, Single Page Applications, AJAX, API integrations, Ionic',
     Backend: 'C#, Node.js, Express',
-    Database: 'PostgreSQL, Knex',
+    Database: 'PostgreSQL, MongoDB',
     Other: 'Azure, SonarQube, LaunchDarkly, Adobe Analytics, Jasmine, Karma'
   }
