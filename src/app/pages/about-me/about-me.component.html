@@ -1,21 +1,55 @@
 <div class="about-me-container">
-    <div class="about-me-image-container">
-        <img src="assets/about-me.png">
-    </div>
-    <div class="about-me-bio-container">
-        <p>I feel like I've done everything. Pizza maker. Shoe shiner. Property manager. Used car salesman. Even a <a href="https://www.youtube.com/watch?v=M_Ty0yrW7bo" target="_blank">touring musician</a>. But it wasn't until I rediscovered my love for coding that I truly felt like I was in my environment.</p>
+  <div class="about-me-image-container">
+    <img src="assets/about-me.png" />
+  </div>
+  <div class="about-me-bio-container">
+    <p>
+      I feel like I've done everything. Pizza maker. Shoe shiner. Property
+      manager. Used car salesman. Even a
+      <a href="https://www.youtube.com/watch?v=M_Ty0yrW7bo" target="_blank"
+        >touring musician</a
+      >. But it wasn't until I rediscovered my love for coding that I truly felt
+      like I was in my environment.
+    </p>
 
-        <p>(Pun intended.)</p>
+    <p>(Pun intended.)</p>
 
-        <p>Although my professional engineering career may have begun in 2022, I began coding when I was still in the single digits, devouring an HTML for Dummies book and building my own sites. (Back when CSS was still in its infancy.) Now I spend my time working with <strong>Angular</strong>, <strong>Typescript</strong>, and <strong>C#</strong>, whether that means designing a game for my son or working to improve my company's product.</p>
-    
-        <p>Ultimately, my passion for software development combines my love for creating (especially considering my musical background) with my enjoyment of problem-solving and that rush you get when you finally figure it out. (Until you realize you didn't and have to try again, but that's part of the journey, right?) I am always open to learning new languages and technologies, and to say I'm excited about where my future is taking me is an understatement.</p>
-    
-        <p>If you would like to talk more, I can be contacted <a routerLink="contact">here</a> or on <a href="https://www.linkedin.com/in/davidmarshalldev/">LinkedIn</a>. Thanks for stopping by!</p>
-    </div>
-    <div class="about-me-technology-container">
-        <ul class="list-group" *ngFor="let item of listOfTechnologies | keyvalue:onCompare">
-            <li class="list-group-item"><span><strong>{{item.key}}: </strong></span>{{item.value}}</li>
-        </ul>
-    </div>
+    <p>
+      Although my professional engineering career may have begun in 2022, I
+      began coding when I was still in the single digits, devouring an HTML for
+      Dummies book and building my own sites. (Back when CSS was still in its
+      infancy.) Now I spend my time working with <strong>Angular</strong>,
+      <strong>Typescript</strong>, <strong>React</strong>, and <strong>C#</strong>, whether that means
+      designing a game for my son or working to improve my company's product.
+    </p>
+
+    <p>
+      Ultimately, my passion for software development combines my love for
+      creating (especially considering my musical background) with my enjoyment
+      of problem-solving and that rush you get when you finally figure it out.
+      (Until you realize you didn't and have to try again, but that's part of
+      the journey, right?) I am always open to learning new languages and
+      technologies, and to say I'm excited about where my future is taking me is
+      an understatement.
+    </p>
+
+    <p>
+      If you would like to talk more, I can be contacted
+      <a routerLink="contact">here</a> or on
+      <a href="https://www.linkedin.com/in/davidmarshalldev/">LinkedIn</a>.
+      Thanks for stopping by!
+    </p>
+  </div>
+  <div class="about-me-technology-container">
+    <ul
+      class="list-group"
+      *ngFor="let item of listOfTechnologies | keyvalue : onCompare"
+    >
+      <li class="list-group-item">
+        <span
+          ><strong>{{ item.key }}: </strong></span
+        >{{ item.value }}
+      </li>
+    </ul>
+  </div>
 </div>
