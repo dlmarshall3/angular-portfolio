@@ -1,9 +1,16 @@
 export const Jobs = [
   {
+    name: 'Breakthrough Fuel',
+    role: 'Software Engineer II',
+    location: 'Greenbay, WI',
+    time: 'December 2024 - Present',
+    experience: [],
+  },
+  {
     name: 'H&R Block',
     role: 'Software Engineer I',
     location: 'Kansas City, MO',
-    time: 'June 2022 - Present',
+    time: 'June 2022 - December 2024',
     experience: [
       'Collaborated with senior developers to refactor Angular code for two microapps by implementing proper utilization of services and typing, removing technical debt, and improving readability and optimization in preparation for the 2022 tax season.',
       'Temporarily joined another team to help refactor their API, ensuring compliance with enterprise guidelines, and contributed to drafting user stories and features to plan future UI refactoring efforts.',
@@ -16,7 +23,7 @@ export const Jobs = [
     name: 'Correlation One',
     role: 'Lead Instructor / Teaching Assistant / Curriculum Developer',
     location: 'Remote',
-    time: 'July 2023 - Present',
+    time: 'July 2023 - December 2024',
     experience: [
       'Provided personalized support to 20-25 fellows throughout each 4-month cohort, engaging in both one-on-one sessions and group settings.',
       'Consistently earned high praise and collected feedback from both fellows and program managers (survey average of 95%).',
