@@ -6,7 +6,7 @@
         type="text"
         [formControl]="emailForm.controls.name"
         [ngClass]="{
-          'error-input': emailForm.controls.name.errors && displayErrors,
+          'error-input': emailForm.controls.name.errors && displayErrors
         }"
       />
     </div>
@@ -16,7 +16,7 @@
         type="text"
         [formControl]="emailForm.controls.email"
         [ngClass]="{
-          'error-input': emailForm.controls.email.errors && displayErrors,
+          'error-input': emailForm.controls.email.errors && displayErrors
         }"
       />
     </div>
@@ -25,7 +25,7 @@
       <textarea
         [formControl]="emailForm.controls.message"
         [ngClass]="{
-          'error-input': emailForm.controls.message.errors && displayErrors,
+          'error-input': emailForm.controls.message.errors && displayErrors
         }"
       ></textarea>
     </div>

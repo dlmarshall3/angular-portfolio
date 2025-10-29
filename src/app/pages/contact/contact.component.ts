@@ -37,7 +37,7 @@ export class ContactComponent implements OnInit {
             replyto: this.emailForm.controls.email.value,
             message: this.emailForm.controls.message.value,
           },
-          { headers: headers },
+          { headers: headers }
         )
         .subscribe((response) => {
           if (response) {
