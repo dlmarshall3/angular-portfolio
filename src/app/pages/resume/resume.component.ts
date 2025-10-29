@@ -15,8 +15,13 @@ export class ResumeComponent implements OnInit {
   public jobExperience = Jobs;
   public technologies = Technologies;
   public education = Education;
+  public activeIndex: number | null = null;
 
   ngOnInit(): void {
+  }
+
+  public toggleAccordion(index: number): void {
+    this.activeIndex = this.activeIndex === index ? null : index;
   }
 
   public onCompare(_left: KeyValue<any, any>, _right: KeyValue<any, any>): number {
