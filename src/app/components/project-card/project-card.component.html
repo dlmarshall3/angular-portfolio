@@ -1,21 +1,48 @@
 <div class="card">
-    <div class="card-media-container">
-      <iframe *ngIf="projectVideo && safeVideoUrl" 
-              [src]="safeVideoUrl" 
-              class="card-video"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-      </iframe>
-      <img *ngIf="!projectVideo" [src]="projectImage" class="card-img-top" [alt]="projectName">
+  <div class="card-media-container">
+    <iframe
+      *ngIf="projectVideo && safeVideoUrl"
+      [src]="safeVideoUrl"
+      class="card-video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    >
+    </iframe>
+    <img
+      *ngIf="!projectVideo"
+      [src]="projectImage"
+      class="card-img-top"
+      [alt]="projectName"
+    />
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">
+      <strong>{{ projectName }}</strong>
+    </h5>
+    <p class="card-text">{{ projectDescription }}</p>
+    <div class="button-container">
+      <button
+        *ngIf="projectRepo"
+        (click)="openLink(projectRepo)"
+        class="project-btn"
+      >
+        Repo
+      </button>
+      <button
+        *ngIf="projectDemo"
+        (click)="openLink(projectDemo)"
+        class="project-btn"
+      >
+        Demo
+      </button>
+      <button
+        *ngIf="npmPackage"
+        (click)="openLink(npmPackage)"
+        class="project-btn"
+      >
+        NPM Package
+      </button>
     </div>
-    <div class="card-body">
-      <h5 class="card-title"><strong>{{projectName}}</strong></h5>
-      <p class="card-text">{{projectDescription}}</p>
-      <div class="button-container">
-        <button *ngIf="projectRepo" (click)="openLink(projectRepo)" class="project-btn">Repo</button>
-        <button *ngIf="projectDemo" (click)="openLink(projectDemo)" class="project-btn">Demo</button>
-        <button *ngIf="npmPackage" (click)="openLink(npmPackage)" class="project-btn">NPM Package</button>
-      </div>
-    </div>
+  </div>
 </div>

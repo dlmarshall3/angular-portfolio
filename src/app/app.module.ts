@@ -20,15 +20,15 @@ import { ResumeComponent } from './pages/resume/resume.component';
     ProjectsComponent,
     ContactComponent,
     ProjectCardComponent,
-    ResumeComponent
+    ResumeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

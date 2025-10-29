@@ -5,11 +5,10 @@ import { Jobs } from './jobs';
 import { Technologies } from '../../shared/technologies';
 import { Education } from './education';
 
-
 @Component({
   selector: 'app-resume',
   templateUrl: './resume.component.html',
-  styleUrls: ['./resume.component.scss']
+  styleUrls: ['./resume.component.scss'],
 })
 export class ResumeComponent implements OnInit {
   public jobExperience = Jobs;
@@ -17,15 +16,16 @@ export class ResumeComponent implements OnInit {
   public education = Education;
   public activeIndex: number | null = null;
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   public toggleAccordion(index: number): void {
     this.activeIndex = this.activeIndex === index ? null : index;
   }
 
-  public onCompare(_left: KeyValue<any, any>, _right: KeyValue<any, any>): number {
+  public onCompare(
+    _left: KeyValue<any, any>,
+    _right: KeyValue<any, any>,
+  ): number {
     return 1;
   }
-
 }
