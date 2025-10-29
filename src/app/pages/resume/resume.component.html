@@ -1,42 +1,56 @@
 <div class="resume-container">
-    <div class="experience-container">
-        <h1><u>Experience:</u></h1>
-        <div class="custom-accordion">
-            <div class="accordion-item" *ngFor="let job of jobExperience; index as i">
-                <div class="accordion-header" (click)="toggleAccordion(i)" [class.active]="activeIndex === i">
-                    <span class="accordion-title">{{job.name}}</span>
-                    <span class="accordion-icon" [class.rotated]="activeIndex === i">▼</span>
-                </div>
-                <div class="accordion-content" [class.expanded]="activeIndex === i">
-                    <div class="accordion-body">
-                        <h5>{{job.role}}</h5>
-                        <h5>{{job.location}}</h5>
-                        <h5>{{job.time}}</h5>
-                        <ul *ngFor="let exp of job.experience">
-                            <li>{{exp}}</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <div class="experience-container">
+    <h1><u>Experience:</u></h1>
+    <div class="custom-accordion">
+      <div class="accordion-item" *ngFor="let job of jobExperience; index as i">
+        <div
+          class="accordion-header"
+          (click)="toggleAccordion(i)"
+          [class.active]="activeIndex === i"
+        >
+          <span class="accordion-title">{{ job.name }}</span>
+          <span class="accordion-icon" [class.rotated]="activeIndex === i"
+            >▼</span
+          >
         </div>
+        <div class="accordion-content" [class.expanded]="activeIndex === i">
+          <div class="accordion-body">
+            <h5>{{ job.role }}</h5>
+            <h5>{{ job.location }}</h5>
+            <h5>{{ job.time }}</h5>
+            <ul *ngFor="let exp of job.experience">
+              <li>{{ exp }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="technologies-container">
-        <h1><u>Technologies</u></h1>
-        <ul *ngFor="let item of technologies | keyvalue:onCompare">
-            <li><span><strong>{{item.key}}: </strong></span>{{item.value}}</li>
-        </ul>
-    </div>
-    <div class="education-container">
-        <h1><u>Education</u></h1>
-        <ul *ngFor="let school of education">
-            <li><strong>{{school.school}}</strong></li>
-            <li>{{school.degree}}</li>
-            <li>{{school.location}} | {{school.time}}</li>
-        </ul>
-    </div>
-    <hr>
-    <div class="resume-download">
-        <p>You can download the resume here:</p>
-        <a href="../../../assets/DavidMarshallResume.pdf" target="_blank"><button>Download</button></a>
-    </div>
+  </div>
+  <div class="technologies-container">
+    <h1><u>Technologies</u></h1>
+    <ul *ngFor="let item of technologies | keyvalue: onCompare">
+      <li>
+        <span
+          ><strong>{{ item.key }}: </strong></span
+        >{{ item.value }}
+      </li>
+    </ul>
+  </div>
+  <div class="education-container">
+    <h1><u>Education</u></h1>
+    <ul *ngFor="let school of education">
+      <li>
+        <strong>{{ school.school }}</strong>
+      </li>
+      <li>{{ school.degree }}</li>
+      <li>{{ school.location }} | {{ school.time }}</li>
+    </ul>
+  </div>
+  <hr />
+  <div class="resume-download">
+    <p>You can download the resume here:</p>
+    <a href="../../../assets/DavidMarshallResume.pdf" target="_blank"
+      ><button>Download</button></a
+    >
+  </div>
 </div>

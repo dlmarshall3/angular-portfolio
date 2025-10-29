@@ -4,7 +4,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 @Component({
   selector: 'app-project-card',
   templateUrl: './project-card.component.html',
-  styleUrls: ['./project-card.component.scss']
+  styleUrls: ['./project-card.component.scss'],
 })
 export class ProjectCardComponent implements OnInit {
   @Input() projectName = '';
@@ -14,14 +14,16 @@ export class ProjectCardComponent implements OnInit {
   @Input() projectImage = '';
   @Input() projectVideo = '';
   @Input() npmPackage = '';
-  
+
   safeVideoUrl: SafeResourceUrl | null = null;
 
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor(private sanitizer: DomSanitizer) {}
 
   ngOnInit(): void {
     if (this.projectVideo) {
-      this.safeVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.projectVideo);
+      this.safeVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+        this.projectVideo,
+      );
     }
   }
 
@@ -30,5 +32,4 @@ export class ProjectCardComponent implements OnInit {
       window.open(url, '_blank');
     }
   }
-
 }

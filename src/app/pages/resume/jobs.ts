@@ -5,7 +5,7 @@ export const Jobs = [
     location: 'Des Moines, IA (Remote)',
     time: 'June 2025 - Present',
     experience: [
-      'Implemented frontend feature flag system utilizing Azure App Config for client\'s telematics web application, enabling faster and more frequent product releases.',
+      "Implemented frontend feature flag system utilizing Azure App Config for client's telematics web application, enabling faster and more frequent product releases.",
       'Within the first two months of working with the client, collaborated with product owners, stakeholders and engineers across different departments to gather requirements, develop user stories, and lead development of a global telematics feature that had been stalled out for over a year.',
     ],
   },
