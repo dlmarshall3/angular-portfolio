@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Lightbox } from 'ngx-lightbox';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-project-card',
@@ -12,11 +12,23 @@ export class ProjectCardComponent implements OnInit {
   @Input() projectRepo = '';
   @Input() projectDemo = '';
   @Input() projectImage = '';
+  @Input() projectVideo = '';
   @Input() npmPackage = '';
+  
+  safeVideoUrl: SafeResourceUrl | null = null;
 
-  constructor() { }
+  constructor(private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
+    if (this.projectVideo) {
+      this.safeVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.projectVideo);
+    }
+  }
+
+  openLink(url: string): void {
+    if (url) {
+      window.open(url, '_blank');
+    }
   }
 
 }

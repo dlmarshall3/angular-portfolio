@@ -1,10 +1,11 @@
 export const Projects = [
   {
-    projectName: 'Burro 4x4 Dashboard',
-    projectDescription: `Developed a Next.js application for my brother-in-law's Land Rover restoration company, enabling clients to receive status updates on their vehicles. This streamlined communication has drastically reduced the need for clients to reach out, preserving precious family time.`,
-    projectRepo: 'https://github.com/dlmarshall3/burro-4x4-mongo',
-    projectDemo: 'https://burro-dashboard.vercel.app',
-    projectImage: 'assets/burro.gif',
+    projectName: 'Life by Design',
+    projectDescription: `A React Native mobile application for Wellspring Consult. FastAPI/PostgreSQL backend. Designed from the ground up besides a few API routes for the backend. Currently in private testing, but will update with App Store links when public.`,
+    projectRepo: '',
+    projectDemo: '',
+    projectImage: '',
+    projectVideo: 'https://www.youtube.com/embed/Qy_Erfg-wZw',
     npmPackage: '',
   },
   {
@@ -13,6 +14,7 @@ export const Projects = [
     projectRepo: 'https://github.com/dlmarshall3/angular-portfolio',
     projectDemo: 'https://davidmarshall.dev/',
     projectImage: 'assets/portfolio.png',
+    projectVideo: '',
     npmPackage: '',
   },
   {
@@ -21,6 +23,7 @@ export const Projects = [
     projectRepo: 'https://github.com/dlmarshall3/kaiju-calculator',
     projectDemo: 'https://kaiju-calculator.vercel.app/',
     projectImage: 'assets/kaiju-calculator.png',
+    projectVideo: '',
     npmPackage: '',
   },
   {
@@ -30,6 +33,7 @@ export const Projects = [
     projectRepo: 'https://github.com/dlmarshall3/homestar-ipsum-angular',
     projectDemo: 'https://homestar-ipsum.vercel.app/',
     projectImage: 'assets/homestar-ipsum.png',
+    projectVideo: '',
     npmPackage: 'https://www.npmjs.com/package/homestar-ipsum',
   },
 ];
